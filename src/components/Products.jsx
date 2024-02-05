@@ -4,14 +4,17 @@ import productList from "../helpers/productList";
 
 const Products = () => {
   const products = productList;
-  console.log(products);
 
   return (
     <>
       <div>Products</div>
-      <Product />
+      <div>
+        {products.map((product) => {
+          return <Product item={product} key={product.id} />;
+        })}
+      </div>
     </>
-  )
-}
+  );
+};
 
 export default Products;

@@ -1,9 +1,11 @@
 import "../styles/Product.css";
 
-const Product = () => {
+const Product = ({item}) => {
   return (
     <>
-      <div>Product</div>
+      <div>{item.name}</div>
+      <div>{item.price}</div>
+      <div>{item.image}</div>
     </>
   )
 }
